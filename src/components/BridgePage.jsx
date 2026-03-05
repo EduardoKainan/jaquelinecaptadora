@@ -52,23 +52,41 @@ const BridgePage = ({ onNavigate }) => {
               transition={{ duration: 0.6 }}
               className="hero-card glass"
             >
-              <h1>Apoio Especializado e Bem-Estar</h1>
-              <p>Oferecemos suporte humanizado e infraestrutura completa para quem busca transformar sua qualidade de vida com segurança e acolhimento.</p>
+              <div className="hero-flex-container">
+                <div className="hero-content-left">
+                  <h1>Apoio Especializado e Bem-Estar</h1>
+                  <p>Oferecemos suporte humanizado e infraestrutura completa para quem busca transformar sua qualidade de vida com segurança e acolhimento.</p>
 
-              <div className="cta-group">
-                <a href={PHONE_NUMBER} className="btn btn-danger btn-lg">
-                  <Phone size={20} />
-                  URGÊNCIA: (62) 9 9668-7484
-                </a>
-                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp btn-lg">
-                  <MessageCircle size={20} />
-                  Falar com Terapeuta
-                </a>
+                  <div className="cta-group">
+                    <a href={PHONE_NUMBER} className="btn btn-danger btn-lg">
+                      <Phone size={20} />
+                      URGÊNCIA: (62) 9 9668-7484
+                    </a>
+                    <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp btn-lg">
+                      <MessageCircle size={20} />
+                      Falar com Terapeuta
+                    </a>
+                  </div>
+
+                  <button onClick={onNavigate} className="btn-secondary-link">
+                    Conhecer site oficial <ArrowRight size={18} />
+                  </button>
+                </div>
+                <div className="hero-content-right">
+                  <div className="hero-image-box">
+                    <img
+                      src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80"
+                      alt="Profissional de Saúde Acolhedor"
+                      className="bridge-hero-img"
+                      loading="lazy"
+                    />
+                    <div className="hero-floating-badge">
+                      <ShieldCheck size={18} />
+                      <span>Atendimento 24h</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-
-              <button onClick={onNavigate} className="btn-secondary-link">
-                Conhecer site oficial <ArrowRight size={18} />
-              </button>
             </motion.div>
           </div>
         </section>
@@ -205,10 +223,62 @@ const BridgePage = ({ onNavigate }) => {
         .hero-card {
           position: relative;
           z-index: 1;
-          max-width: 800px;
+          max-width: 1000px;
           margin: 0 auto;
           padding: 3rem;
           border-radius: 2rem;
+        }
+
+        .hero-flex-container {
+          display: flex;
+          align-items: center;
+          gap: 3rem;
+          text-align: left;
+        }
+
+        .hero-content-left {
+          flex: 1.2;
+        }
+
+        .hero-content-right {
+          flex: 0.8;
+          display: flex;
+          justify-content: center;
+        }
+
+        .hero-image-box {
+          position: relative;
+          width: 100%;
+          max-width: 350px;
+        }
+
+        .bridge-hero-img {
+          width: 100%;
+          height: 400px;
+          object-fit: cover;
+          border-radius: 1.5rem;
+          box-shadow: var(--shadow-lg);
+        }
+
+        .hero-floating-badge {
+          position: absolute;
+          bottom: 20px;
+          right: -20px;
+          background: var(--white);
+          padding: 0.75rem 1.25rem;
+          border-radius: 1rem;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          box-shadow: var(--shadow-lg);
+          font-weight: 600;
+          color: var(--primary);
+          animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
         }
         
         .hero-card h1 {
@@ -227,7 +297,7 @@ const BridgePage = ({ onNavigate }) => {
           display: flex;
           flex-direction: column;
           gap: 1rem;
-          align-items: center;
+          align-items: flex-start;
           margin-bottom: 2rem;
         }
         
@@ -334,9 +404,14 @@ const BridgePage = ({ onNavigate }) => {
         .text-center { text-align: center; }
 
         @media (max-width: 768px) {
+          .hero-flex-container { flex-direction: column; text-align: center; gap: 2rem; }
+          .cta-group { align-items: center; }
           .hero-card { padding: 2rem 1rem; }
           .hero-card h1 { font-size: 2rem; }
           .hero-card p { font-size: 1.1rem; }
+          .hero-image-box { max-width: 280px; }
+          .bridge-hero-img { height: 300px; }
+          .hero-floating-badge { right: 0; bottom: 10px; }
         }
       `}</style>
     </div>
