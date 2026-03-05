@@ -97,7 +97,7 @@ const MainPage = () => {
             className="hero-image-container"
           >
             <div className="hero-image-wrapper">
-              <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80" alt="Médico Especialista em Acolhimento" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&fm=webp" alt="Médico Especialista em Acolhimento" loading="lazy" />
               <div className="image-overlay-card glass">
                 <ShieldCheck color="var(--success)" />
                 <div>
@@ -187,8 +187,8 @@ const MainPage = () => {
           </div>
           <div className="prof-images-container">
             <div className="prof-image-box">
-              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80" alt="Médica" className="prof-img prof-img-1" />
-              <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80" alt="Equipe" className="prof-img prof-img-2" />
+              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&fm=webp" alt="Médica" className="prof-img prof-img-1" />
+              <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&fm=webp" alt="Equipe" className="prof-img prof-img-2" />
             </div>
           </div>
         </div>

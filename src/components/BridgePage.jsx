@@ -1,7 +1,7 @@
 import React from 'react';
 import { Phone, MessageCircle, ArrowRight, ShieldCheck, Heart, UserCheck } from 'lucide-react';
 import { motion } from 'framer-motion';
-import EquipeBrasil from '../assets/equipe-brasil.png';
+import EquipeBrasil from '../assets/equipe-brasil.webp';
 
 const CLINIC_IMAGES = [
   'https://clinicasgoiasbrasil.com.br/wp-content/uploads/2024/11/Unidade-1-10.jpeg',
@@ -210,7 +210,7 @@ const BridgePage = ({ onNavigate }) => {
         .bridge-hero {
           padding: 180px 0 100px;
           text-align: center;
-          background: url('https://images.unsplash.com/photo-1576091160550-217359f51f8c?auto=format&fit=crop&q=80') center/cover no-repeat;
+          background: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&fm=webp') center/cover no-repeat;
           position: relative;
         }
         
