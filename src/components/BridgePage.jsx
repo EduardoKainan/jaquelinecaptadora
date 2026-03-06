@@ -33,7 +33,7 @@ const BridgePage = ({ onNavigate }) => {
     <div className="bridge-page">
       <header className="bridge-header glass">
         <div className="container header-content">
-          <img src="https://i.postimg.cc/sg7gqzPM/LOGO-SEM-FUNDO.png" alt="Clínicas Brasil - Logo Oficial" className="logo" loading="lazy" />
+          <img src="https://i.postimg.cc/sg7gqzPM/LOGO-SEM-FUNDO.png" alt="Recuperando Vida - Logo Oficial" className="logo" loading="lazy" />
           <div className="header-actions">
             <a href={PHONE_NUMBER} className="btn-call-header">
               <Phone size={20} />
@@ -77,7 +77,7 @@ const BridgePage = ({ onNavigate }) => {
                   <div className="hero-image-box">
                     <img
                       src={EquipeBrasil}
-                      alt="Equipe de Terapeutas e Médicos - Clínicas Brasil"
+                      alt="Equipe de Terapeutas e Médicos - Recuperando Vida"
                       className="bridge-hero-img"
                       loading="lazy"
                     />

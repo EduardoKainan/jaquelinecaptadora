@@ -31,7 +31,7 @@ const MainPage = () => {
       {/* Header */}
       <header className="main-header glass">
         <div className="container header-content">
-          <img src="https://i.postimg.cc/sg7gqzPM/LOGO-SEM-FUNDO.png" alt="Clínicas Brasil - Logo Oficial" className="logo" loading="lazy" />
+          <img src="https://i.postimg.cc/sg7gqzPM/LOGO-SEM-FUNDO.png" alt="Recuperando Vida - Logo Oficial" className="logo" loading="lazy" />
           <nav className="desktop-nav">
             <a href="#tratamentos">Tratamentos</a>
             <a href="#metodologia">Metodologia</a>
@@ -246,7 +246,7 @@ const MainPage = () => {
       <footer className="main-footer">
         <div className="container footer-bottom">
           <img src="https://i.postimg.cc/sg7gqzPM/LOGO-SEM-FUNDO.png" alt="Logo" className="logo-footer" />
-          <p>© 2024 Clínicas Brasil - Recuperação de Elite. Todos os direitos reservados.</p>
+          <p>© 2024 Recuperando Vida - Recuperação de Elite. Todos os direitos reservados.</p>
         </div>
       </footer>
 
