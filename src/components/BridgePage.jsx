@@ -1,7 +1,5 @@
 import React from 'react';
 import { Phone, MessageCircle, ArrowRight, ShieldCheck, Heart, UserCheck } from 'lucide-react';
-import { motion } from 'framer-motion';
-import EquipeBrasil from '../assets/equipe-brasil.webp';
 
 const CLINIC_IMAGES = [
   '/assets/optimized/Unidade-1-10.webp',
@@ -33,7 +31,7 @@ const BridgePage = ({ onNavigate }) => {
     <div className="bridge-page">
       <header className="bridge-header glass">
         <div className="container header-content">
-          <img src="https://i.postimg.cc/sg7gqzPM/LOGO-SEM-FUNDO.png" alt="Recuperando Vida - Logo Oficial" className="logo" width="157" height="88" fetchpriority="high" />
+          <img src="/assets/optimized/logo.png" alt="Recuperando Vida - Logo Oficial" className="logo" width="157" height="88" fetchpriority="high" />
           <div className="header-actions">
             <a href={PHONE_NUMBER} className="btn-call-header">
               <Phone size={20} />
@@ -47,12 +45,7 @@ const BridgePage = ({ onNavigate }) => {
         {/* Simple Hero */}
         <section className="bridge-hero">
           <div className="container">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="hero-card glass"
-            >
+            <div className="hero-card glass fade-in-up">
               <div className="hero-flex-container">
                 <div className="hero-content-left">
                   <h1>Apoio Especializado e Bem-Estar</h1>
@@ -90,7 +83,7 @@ const BridgePage = ({ onNavigate }) => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -174,6 +167,14 @@ const BridgePage = ({ onNavigate }) => {
       </footer>
 
       <style>{`
+        @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-up {
+          animation: fadeInUp 0.6s ease-out both;
+        }
+
         .bridge-page {
           background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
           min-height: 100vh;
@@ -196,6 +197,7 @@ const BridgePage = ({ onNavigate }) => {
         
         .logo {
           height: 50px;
+          width: auto;
         }
         
         .btn-call-header {
@@ -210,17 +212,10 @@ const BridgePage = ({ onNavigate }) => {
         }
         
         .bridge-hero {
-          padding: 180px 0 100px;
+          padding: 140px 0 80px;
           text-align: center;
-          background: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&fm=webp') center/cover no-repeat;
+          background: linear-gradient(135deg, #e8f0fe 0%, #f0f7ff 100%);
           position: relative;
-        }
-        
-        .bridge-hero::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background: rgba(255,255,255,0.7);
         }
         
         .hero-card {
@@ -422,3 +417,4 @@ const BridgePage = ({ onNavigate }) => {
 };
 
 export default BridgePage;
+

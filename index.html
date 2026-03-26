@@ -9,8 +9,7 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-TBPT55WR');</script>
   <!-- End Google Tag Manager -->
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="https://i.postimg.cc/sg7gqzPM/LOGO-SEM-FUNDO.png" />
+  <link rel="icon" type="image/png" href="/assets/optimized/logo.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Meta Tags -->
@@ -26,12 +25,17 @@
   <meta property="og:image" content="https://clinicasgoiasbrasil.com.br/wp-content/uploads/2024/11/Unidade-1-10.jpeg" />
   <meta property="og:type" content="website" />
 
-  <!-- Performance: Preconnect to external domains -->
+  <!-- Performance: Preconnect to font domains only -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
-  <link rel="preconnect" href="https://clinicasgoiasbrasil.com.br" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" />
+
+  <!-- Preload LCP image -->
+  <link rel="preload" as="image" href="/assets/optimized/medico-especialista.webp" type="image/webp" />
+
+  <!-- Non-render-blocking Google Fonts -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@400;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@400;600;700&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@400;600;700&display=swap" /></noscript>
 </head>
 
 <body>
