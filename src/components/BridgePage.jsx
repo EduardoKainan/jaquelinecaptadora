@@ -4,25 +4,25 @@ import { motion } from 'framer-motion';
 import EquipeBrasil from '../assets/equipe-brasil.webp';
 
 const CLINIC_IMAGES = [
-  'https://clinicasgoiasbrasil.com.br/wp-content/uploads/2024/11/Unidade-1-10.jpeg',
-  'https://clinicasgoiasbrasil.com.br/wp-content/uploads/2024/11/Unidade-5-10.jpeg',
-  'https://clinicasgoiasbrasil.com.br/wp-content/uploads/2024/11/Unidade-4-10.jpeg',
-  'https://clinicasgoiasbrasil.com.br/wp-content/uploads/2024/11/Unidade-3-10.jpeg',
-  'https://clinicasgoiasbrasil.com.br/wp-content/uploads/2024/11/Unidade-2-10.jpeg',
-  'https://clinicasgoiasbrasil.com.br/wp-content/uploads/2024/11/Unidade-2-7.jpeg',
-  'https://clinicasgoiasbrasil.com.br/wp-content/uploads/2024/11/Unidade-1-7.jpeg',
-  'https://clinicasgoiasbrasil.com.br/wp-content/uploads/2024/11/Unidade-3-7.jpeg',
-  'https://clinicasgoiasbrasil.com.br/wp-content/uploads/2024/11/Unidade-3-3.jpeg',
-  'https://clinicasgoiasbrasil.com.br/wp-content/uploads/2024/11/Unidade-2-3.jpeg',
-  'https://clinicasgoiasbrasil.com.br/wp-content/uploads/2024/11/Unidade-1-3.jpeg'
+  '/assets/optimized/Unidade-1-10.webp',
+  '/assets/optimized/Unidade-5-10.webp',
+  '/assets/optimized/Unidade-4-10.webp',
+  '/assets/optimized/Unidade-3-10.webp',
+  '/assets/optimized/Unidade-2-10.webp',
+  '/assets/optimized/Unidade-2-7.webp',
+  '/assets/optimized/Unidade-1-7.webp',
+  '/assets/optimized/Unidade-3-7.webp',
+  '/assets/optimized/Unidade-3-3.webp',
+  '/assets/optimized/Unidade-2-3.webp',
+  '/assets/optimized/Unidade-1-3.webp'
 ];
 
 const INSURANCE_LOGOS = [
-  'https://clinicasgoiasbrasil.com.br/wp-content/uploads/2023/08/porto-seguros.png',
-  'https://clinicasgoiasbrasil.com.br/wp-content/uploads/2023/08/amil.png',
-  'https://clinicasgoiasbrasil.com.br/wp-content/uploads/2023/08/bradesco-saude.png',
-  'https://clinicasgoiasbrasil.com.br/wp-content/uploads/2023/08/unimed.png',
-  'https://clinicasgoiasbrasil.com.br/wp-content/uploads/2023/08/allianz.png'
+  '/assets/optimized/porto-seguros.webp',
+  '/assets/optimized/amil.webp',
+  '/assets/optimized/bradesco-saude.webp',
+  '/assets/optimized/unimed.webp',
+  '/assets/optimized/allianz.webp'
 ];
 
 const BridgePage = ({ onNavigate }) => {
@@ -33,7 +33,7 @@ const BridgePage = ({ onNavigate }) => {
     <div className="bridge-page">
       <header className="bridge-header glass">
         <div className="container header-content">
-          <img src="https://i.postimg.cc/sg7gqzPM/LOGO-SEM-FUNDO.png" alt="Recuperando Vida - Logo Oficial" className="logo" loading="lazy" />
+          <img src="https://i.postimg.cc/sg7gqzPM/LOGO-SEM-FUNDO.png" alt="Recuperando Vida - Logo Oficial" className="logo" width="157" height="88" fetchpriority="high" />
           <div className="header-actions">
             <a href={PHONE_NUMBER} className="btn-call-header">
               <Phone size={20} />
@@ -76,10 +76,12 @@ const BridgePage = ({ onNavigate }) => {
                 <div className="hero-content-right">
                   <div className="hero-image-box">
                     <img
-                      src={EquipeBrasil}
+                      src="/assets/optimized/medico-especialista.webp"
                       alt="Equipe de Terapeutas e Médicos - Recuperando Vida"
                       className="bridge-hero-img"
-                      loading="lazy"
+                      fetchpriority="high"
+                      width="800"
+                      height="600"
                     />
                     <div className="hero-floating-badge">
                       <ShieldCheck size={18} />
@@ -101,7 +103,7 @@ const BridgePage = ({ onNavigate }) => {
             <div className="marquee-content">
               {[...CLINIC_IMAGES, ...CLINIC_IMAGES].map((img, idx) => (
                 <div key={idx} className="marquee-item clinic-photo">
-                  <img src={img} alt={`Unidade de Tratamento ${idx + 1}`} loading="lazy" />
+                  <img src={img} alt={`Nossas Instalações ${idx + 1}`} loading="lazy" width="600" height="450" />
                 </div>
               ))}
             </div>
@@ -138,7 +140,7 @@ const BridgePage = ({ onNavigate }) => {
             <div className="marquee-content">
               {[...INSURANCE_LOGOS, ...INSURANCE_LOGOS, ...INSURANCE_LOGOS].map((logo, idx) => (
                 <div key={idx} className="marquee-item insurance-logo">
-                  <img src={logo} alt="Convênio Médico Aceito" loading="lazy" />
+                  <img src={logo} alt="Convênio Médico Aceito" loading="lazy" width="200" height="70" />
                 </div>
               ))}
             </div>

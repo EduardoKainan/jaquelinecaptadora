@@ -22,7 +22,7 @@ const INSURANCE_LOGOS = [
   '/assets/optimized/allianz.webp'
 ];
 
-const MainPage = () => {
+const EstruturaPremium = () => {
   const WHATSAPP_LINK = "https://wa.me/556296687484";
   const PHONE_NUMBER = "tel:+556296687484";
 
@@ -52,9 +52,9 @@ const MainPage = () => {
             animate={{ opacity: 1, x: 0 }}
             className="hero-text"
           >
-            <span className="badge">Referência em Bem-Estar</span>
-            <h1 className="hero-title">Cuide de quem você ama com dignidade e excelência</h1>
-            <p className="hero-desc">Atendimento humanizado, equipe multidisciplinar e infraestrutura de alto padrão para saúde mental e bem-estar emocional.</p>
+            <span className="badge">Conforto e Segurança</span>
+            <h1 className="hero-title">Nossa Estrutura: Onde a Recuperação Acontece</h1>
+            <p className="hero-desc">Mais que uma clínica, um ambiente de alto padrão, arborizado e moderno para proporcionar o verdadeiro resgate da vida.</p>
 
             <div className="hero-ctas">
               <a href={WHATSAPP_LINK} className="btn btn-whatsapp btn-hero">
@@ -656,4 +656,4 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+export default EstruturaPremium;
